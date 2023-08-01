@@ -17,5 +17,4 @@ class Obstacle(pygame.sprite.Sprite):
         self.rect.x -= self.velocity
 
     def set_speed(self, speed):
-        print(speed)
         self.velocity = speed
