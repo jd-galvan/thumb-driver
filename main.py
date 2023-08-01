@@ -18,7 +18,7 @@ while not exit:
     if it <= 500 and it % 100 == 0:
         game.accelerate()
 
-    if it % 65 == 0:
+    if it % 64 == 0:
         game.create_obstacle()
 
     game.draw_screen(screen)

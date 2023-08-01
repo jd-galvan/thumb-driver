@@ -4,7 +4,7 @@ import pygame
 import mediapipe as mp
 from mediapipe.tasks import python
 from mediapipe.tasks.python import vision
-from config.constants import UP, DOWN
+from config.constants import UP, DOWN, OPEN_PALM
 
 POSITIONS = {
     "Thumb_Up": UP,
