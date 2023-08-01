@@ -9,13 +9,17 @@ screen = pygame.display.set_mode([SCREEN_WIDTH, SCREEN_HEIGHT])
 game = Game()
 
 exit = False
+it = 1
 while not exit:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exit = True
 
+    if it <= 500 and it % 100 == 0:
+        game.accelerate()
     # screen.fill((0, 0, 0))
     game.draw_screen(screen)
     clock.tick(FPS)
+    it += 1
 
 pygame.quit()
