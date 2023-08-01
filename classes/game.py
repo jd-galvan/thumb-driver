@@ -4,7 +4,7 @@ from .car import Car
 from .obstacle import Obstacle
 from .gesture import GestureRecognition
 import random
-from config.setup import OBSTACLE_WIDTH
+from config.setup import OBSTACLE_WIDTH, SCREEN_WIDTH
 
 
 class Game(object):
@@ -14,12 +14,6 @@ class Game(object):
         self.all_sprites = pygame.sprite.Group()
         self.obstacles = pygame.sprite.Group()
         self.all_sprites.add(self.car)
-        for _ in range(5):
-            obstacle = Obstacle(random.randrange(1440, 3000, OBSTACLE_WIDTH),
-                                random.choice([180, 420]))
-            self.all_sprites.add(obstacle)
-            self.obstacles.add(obstacle)
-
         self.gesture_recognition = GestureRecognition()
 
     def draw_screen(self, screen):
@@ -42,4 +36,10 @@ class Game(object):
     def accelerate(self):
         self.road.increase_speed()
         for o in self.obstacles:
-            o.increase_velocity()
+            o.set_speed(self.road.get_speed())
+
+    def create_obstacle(self):
+        obstacle = Obstacle(SCREEN_WIDTH,
+                            random.choice([180, 420]), self.road.get_speed())
+        self.all_sprites.add(obstacle)
+        self.obstacles.add(obstacle)

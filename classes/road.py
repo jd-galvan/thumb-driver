@@ -32,3 +32,6 @@ class Road(object):
 
     def increase_speed(self):
         self.velocity += INCREASING_FACTOR_SPEED
+
+    def get_speed(self):
+        return self.velocity

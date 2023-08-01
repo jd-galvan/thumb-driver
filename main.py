@@ -17,7 +17,10 @@ while not exit:
 
     if it <= 500 and it % 100 == 0:
         game.accelerate()
-    # screen.fill((0, 0, 0))
+
+    if it % 65 == 0:
+        game.create_obstacle()
+
     game.draw_screen(screen)
     clock.tick(FPS)
     it += 1
