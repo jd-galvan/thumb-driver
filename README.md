@@ -4,7 +4,7 @@ You need to avoid the obstacles in the road with your thumb.
 
 ![VideoGIF3]()
 
-This poject was made with Pygame and MediaPipe:
+This poject was made with Pygame, OpenCV and MediaPipe:
 
 ![](/static/images/pygame.png)
 ![](/static/images/opencv.png)
