@@ -2,7 +2,7 @@
 
 You need to avoid the obstacles in the road with your thumb. 
 
-![VideoGIF3]()
+![VideoGIF](https://github.com/jd-galvan/thumb-driver/blob/main/static/images/demo.gif)
 
 This poject was made with Pygame, OpenCV and MediaPipe:
 
